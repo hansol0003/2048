@@ -1,2 +1,2 @@
 # 2048
-I coded 2048 for you ppl who lack an internet connection. You're welcome.
+A 2048 game that works without an internet connection! Simple games like these MUST be inclusive for all!
