@@ -1,4 +1,4 @@
-# 2048 Utils
+
 
 file_name = "starter_2048"
 try:
@@ -6,7 +6,7 @@ try:
 except ImportError:
     starter = __import__("_2048." + file_name, fromlist=["something"])
 
-# Importing non-standard libraries
+
 try:
     import getch
 except ImportError:
@@ -18,20 +18,17 @@ except ImportError:
 try:
     from tkinter import *
 
-    # Assigned to None because import was successful but $DISPLAY may not be set
+
     gui, GUI_runnable, = None, None
 except ImportError:
     gui, GUI_runnable, = False, False
-# Importing standard libraries
+
 import random
 import os
 import time
 import sys
 
 
-############################################################################################################
-################################## DO NOT CHANGE ANYTHING ABOVE THIS LINE ##################################    - Section 2 -
-############################################################################################################
 
 
 def get_key_press():
@@ -43,21 +40,18 @@ def clear():
     """Utility function that clears the terminal GUI's screen - takes no arguments"""
     try:
         try:
-            # For Macs and Linux
+     
             os.system('clear');
         except:
-            # For Windows            REPORTED BUG: Sometimes does not work on 64 bit Windows
+
             os.system('cls');
     except:
-        # If nothing else works, a hacky, non optimal solution
+ 
         for i in range(50): print("")
 
 
 def pause(seconds):
-    """
-    Utility function that pauses for the given amount of time
-    Arg seconds: a float or integer - number of seconds to pause for
-    """
+    
     time.sleep(seconds);
 
 
